@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="../theme/css/fonts.css" rel="stylesheet">
+	<link href="../theme/css/sdk.css" rel="stylesheet">
+	<script src="../vendor/ckeditor/ckeditor.js"></script>
+	</head>
+<body>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short="">
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;sup&gt;1&lt;/sup&gt;&lt;/strong&gt;&amp;nbsp;was the spaceflight that landed the first
+				humans, Americans &lt;em&gt;&lt;strong&gt;Neil Armstrong&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Buzz
+				Aldrin&lt;/strong&gt;&lt;/em&gt;, on the Moon on &lt;u&gt;July 20, 1969, at 20:18 UTC&lt;/u&gt;. Armstrong became the first
+				to step onto the lunar surface 6 hours later on &lt;u&gt;July 21 at 02:56 UTC&lt;/u&gt;.&lt;/p&gt;
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; &lt;u&gt;two and a half hours&lt;/u&gt; outside the
+				spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return
+				to Earth. A third member of the mission, &lt;em&gt;&lt;strong&gt;Michael Collins&lt;/strong&gt;&lt;/em&gt;, piloted the
+				command spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&amp;nbsp;&lt;/sup&gt;Source:
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short="">
+				&lt;h2&gt;Copy Formatting in Lists and Tables&lt;/h2&gt;
+
+				&lt;table align="right" border="1" cellpadding="5"&gt;
+					&lt;caption&gt;&lt;strong&gt;Table 1&lt;/strong&gt;&lt;/caption&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#d3d3d3"&gt;Cell 1&lt;/td&gt;
+							&lt;td&gt;&lt;em&gt;Cell 2&lt;/em&gt;&lt;/td&gt;
+							&lt;td&gt;&lt;em&gt;Cell 3&lt;/em&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;p&gt;The Copy Formatting feature is prepared to handle complicated scenarios of list and table formatting.&lt;/p&gt;
+
+				&lt;p&gt;An example of multiple numbered lists, with the nested list not starting from &amp;quot;1&amp;quot;:&lt;/p&gt;
+
+				&lt;table align="right" border="4" cellpadding="3"&gt;
+					&lt;caption&gt;Table 2&lt;/caption&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th style="background-color:#888888"&gt;&amp;nbsp;Heading 1&lt;/th&gt;
+							&lt;th style="background-color:#888888"&gt;He&lt;strong&gt;adi&lt;/strong&gt;ng 2&lt;/th&gt;
+							&lt;th style="background-color:#888888"&gt;Heading 3&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;strong&gt;&lt;u&gt;Cell 1&lt;/u&gt;&lt;/strong&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 2&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 3&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;strong&gt;&lt;u&gt;Cell 1&lt;/u&gt;&lt;/strong&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 2&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 3&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;ol start="1"&gt;
+					&lt;li&gt;&lt;s&gt;Item 1&lt;/s&gt;&lt;/li&gt;
+					&lt;li&gt;Item 2
+					&lt;ol start="1" style="list-style-type:lower-alpha"&gt;
+						&lt;li&gt;Subitem 1&lt;/li&gt;
+						&lt;li&gt;Subitem 2
+						&lt;ol start="3" style="list-style-type:lower-roman"&gt;
+							&lt;li&gt;&lt;em&gt;Subitem 1&lt;/em&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;em&gt;Subitem 2&lt;/em&gt;&lt;/li&gt;
+						&lt;/ol&gt;
+						&lt;/li&gt;
+						&lt;li&gt;Subitem 3&lt;/li&gt;
+					&lt;/ol&gt;
+					&lt;/li&gt;
+					&lt;li&gt;Item 3&lt;/li&gt;
+				&lt;/ol&gt;
+
+				&lt;p&gt;An example of a&amp;nbsp;mix between numbered and bulleted lists:&lt;/p&gt;
+
+				&lt;ul&gt;
+					&lt;li&gt;Item 1&lt;/li&gt;
+					&lt;li&gt;&lt;s&gt;Item 2&lt;/s&gt;&lt;/li&gt;
+					&lt;li&gt;Item 3
+					&lt;ul&gt;
+						&lt;li&gt;Subitem 1&lt;/li&gt;
+						&lt;li&gt;Subitem 2
+						&lt;ol start="1" style="list-style-type:lower-roman"&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 1&lt;/em&gt;&lt;/u&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 2&lt;/em&gt;&lt;/u&gt;
+							&lt;ul&gt;
+								&lt;li&gt;Subitem 1&lt;/li&gt;
+								&lt;li&gt;Subitem 2&lt;/li&gt;
+							&lt;/ul&gt;
+							&lt;/li&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 3&lt;/em&gt;&lt;/u&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 4&lt;/em&gt;&lt;/u&gt;&lt;/li&gt;
+						&lt;/ol&gt;
+						&lt;/li&gt;
+						&lt;li&gt;Subitem 3&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;/li&gt;
+					&lt;li&gt;Item 4&lt;/li&gt;
+				&lt;/ul&gt;
+
+			</textarea>
+
+
+			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3" data-sample-short="">
+				&lt;table align="right" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse; margin:10px 0 10px 15px"&gt;
+					&lt;caption&gt;&lt;strong&gt;Mission Crew&lt;/strong&gt;&lt;/caption&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th scope="col" style="background-color:#cccccc"&gt;Position&lt;/th&gt;
+							&lt;th scope="col" style="background-color:#cccccc"&gt;Astronaut&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;em&gt;Commander&lt;/em&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Neil A. Armstrong&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;em&gt;Command Module Pilot&lt;/em&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Michael Collins&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;em&gt;Lunar Module Pilot&lt;/em&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;sup&gt;1&lt;/sup&gt;&lt;/strong&gt;&amp;nbsp;was the spaceflight that landed the first humans, Americans &lt;em&gt;&lt;strong&gt;Neil Armstrong&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Buzz Aldrin&lt;/strong&gt;&lt;/em&gt;, on the Moon on &lt;u&gt;July 20, 1969, at 20:18 UTC&lt;/u&gt;. Armstrong became the first to step onto the lunar surface 6 hours later on &lt;u&gt;July 21 at 02:56 UTC&lt;/u&gt;.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; &lt;u&gt;two and a half hours&lt;/u&gt; outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;em&gt;&lt;strong&gt;Michael Collins&lt;/strong&gt;&lt;/em&gt;, piloted the command spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&amp;nbsp;&lt;/sup&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Apollo_11"&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 255,
+					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
+					// Color Button is only added just to show that text and background colors can be copied, too.
+					extraPlugins: 'copyformatting,colorbutton'
+				} );
+			</script>
+
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					height: 450,
+					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
+					// Color Button is only added just to show that text and background colors can be copied, too.
+					extraPlugins: 'copyformatting,colorbutton'
+				} );
+			</script>
+
+			<script data-sample="3">
+				CKEDITOR.replace( 'editor3', {
+					height: 295,
+					extraPlugins: 'copyformatting,colorbutton',
+					// Only allow Copy Formatting in plain text context.
+					copyFormatting_allowedContexts: [ 'text' ],
+					// Only allow Copy Formatting for bold.
+					copyFormatting_allowRules: 'strong;'
+				} );
+			</script>
+
+		</section>
+	</section>
+	
+</body>
+</html>
