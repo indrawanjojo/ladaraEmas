@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 /**
  *
  */
-class profil extends CI_Controller
+class Register extends CI_Controller
 {
 
   function __construct()
@@ -17,7 +17,7 @@ class profil extends CI_Controller
     $this->load->helper('text');
   }
 
-  // public function index(){
-  //   $this->load->view('ladara_emas/profil_register');
-  // }
+  public function index(){
+    $this->load->view('ladara_emas/customer_register');
+  }
 }

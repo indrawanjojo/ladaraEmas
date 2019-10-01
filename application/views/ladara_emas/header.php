@@ -445,6 +445,97 @@ ul.nav {
 
 		</style>
 
+
+<style>
+
+.demo {
+padding: 30px;
+min-height: 280px;
+}
+
+.tab-content{
+padding: 10px;
+}
+
+@nav-link-hover-bg: #eeeeee;
+@nav-tabs-border-color: #dddddd;
+@border-radius-base: 5px;
+@screen-xs-max: 767px;
+
+
+//css to add hamburger and create dropdown
+.nav-tabs.nav-tabs-dropdown,
+.nav-tabs-dropdown {
+@media (max-width: @screen-xs-max) {
+		border: 1px solid @nav-tabs-border-color;
+		border-radius: @border-radius-base;
+		overflow: hidden;
+		position: relative;
+
+		&::after {
+			content: "☰";
+			position: absolute;
+			top: 8px;
+			right: 15px;
+			z-index: 2;
+			pointer-events: none;
+		}
+
+		&.open {
+			a {
+				position: relative;
+				display: block;
+			}
+
+			> li.active > a {
+				background-color: @nav-link-hover-bg;
+			}
+		}
+
+
+	li {
+		display: block;
+		padding: 0;
+		vertical-align: bottom;
+	}
+
+	> li > a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		border-color: transparent;
+
+		&:focus,
+		&:hover,
+		&:active {
+			border-color: transparent;
+		}
+	}
+
+	> li.active > a {
+		display:block;
+		border-color: transparent;
+		position: relative;
+		z-index: 1;
+		background: #fff;
+
+		&:focus,
+		&:hover,
+		&:active {
+			border-color: transparent;
+		}
+
+	}
+}
+}
+
+</style>
+
+
 	<script type="application/ld+json">
 	{
 	    "@context": "http://schema.org",
@@ -504,6 +595,32 @@ ul.nav {
         <meta name="twitter:url" content="https://ladaraindonesia.com/"/>
 
 				<style>
+
+.nav>li>a:hover{
+	text-decoration: none;
+background-color: #337ab766;
+border-radius: 10px;
+}
+
+				@media (min-width: 768px) {
+				    .main {
+							left:70px;
+				    }
+				}
+
+				.sidebar {
+				    position: fixed;
+				    top: 71px;
+				    bottom: 0;
+				    left: 70px;
+				    display: block;
+				    padding: 20px;
+				    /* overflow-x: hidden;
+				    overflow-y: auto;  */
+				    /* background-color: #f5f5f5; */
+				    border-right: 1px solid #eee;
+				}
+
 				.dropbtn {
   color: #337ab7;
   padding: 30px;
@@ -538,19 +655,32 @@ ul.nav {
 .dropdown-content a:hover {background-color: #f1f1f1;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #888888;}
-				</style>
 
+img{
+  max-width:180px;
+}
+input[type=file]{
+padding:10px;
+}
+
+
+
+				</style>
+				<script src="https://unpkg.com/js-offcanvas@1.2.8/dist/_js/js-offcanvas.pkgd.min.js"></script>
+				<link href="https://unpkg.com/js-offcanvas@1.2.8/dist/_css/prefixed/js-offcanvas.css" rel="stylesheet">
 </head>
 <body class="">
 
-	<nav class="navbar navbar-default navbar-static-top" style="position:sticky;top:0;width:100%;">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-				<ul class="nav navbar-nav navbar-right">
-						<li>
-
-	      <a class="navbar-brand" href="#">
+	<nav class="navbar navbar-fixed-top navbar-inverse" style="background-color:#eee;border-color:#eee;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
 	            <?php
 	              $start = 0;
 	              foreach ($setting as $setting)
@@ -558,61 +688,20 @@ ul.nav {
 	              $imglogo = "$path/setting_img/copyright.png";
 	            ?>
 
-	              <a href="http://ladaraindonesia.com/"><img src="<?php echo base_url('assets') ?>/images/emas/logo.png" alt="<?php echo $setting->nama_web; ?>"></a>
+	              <a href="<?php echo base_url() ?>"><img src="<?php echo base_url('assets') ?>/images/emas/logo.png" alt="<?php echo $setting->nama_web; ?>"></a>
 	            <?php } ?>
 	      </a>
-			</li>
-			<li style="top: 20px;left:120px;">
-
-				<a href="#" class="" style="border-right: 2px solid #888888;">Transaksi Emas</a>
-			</li>
-				<li style="top: 20px;left:120px;">
-				<a href="#" class="" style="">  Riwayat Transaksi</a>
-						</li>
-			</ul>
-	    </div>
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-	    <!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-		  Launch demo modal
-		</button>-->
-
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<a href="#">
-					 <div id="loading-ct" class="loading-ct">  Halo! Retno Ismiyati  <span class="glyphicon glyphicon-user" aria-hidden="true" style="padding:15px;"></span></div>
-						<div id="stat_ct" class="stat_ct"></div>
-				</a>
-			</li>
-			<div class="dropdown" style="float:right;">
-			 <span class="glyphicon glyphicon-menu-hamburger dropbtn" aria-hidden="true"></span>
-				<div class="dropdown-content">
-					<a href="#"><img src="<?php echo base_url('assets') ?>/images/emas/icon-1.png" /> LadaraIndonesia.com</a>
-					<a href="<?php echo base_url('profil_register') ?>"><img src="<?php echo base_url('assets') ?>/images/emas/profil.png" /> <br>Profil</a>
-					<a href="#"><img src="<?php echo base_url('assets') ?>/images/emas/invest.png" /> <br>Investasi Lainnya</a>
-				</div>
 			</div>
-	    </ul>
-
-	      <!--<ul class="nav navbar-nav navbar-right">
-
-	      	<?php if($this->session->userdata('id_login') != '') { ?>
-	      	<li>
-				<a href="https://deposit.ladaraindonesia.com/">
-					 <div id="loading-ct" class="loading-ct"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>  Loading..</div>
-						<div id="stat_ct" class="stat_ct"></div>
-				</a>
-			</li>
-			<?php } ?>
-
-	        <?php if($this->session->userdata('id_login') == '') { ?>
-	          <li>
-	            <a href="https://ladaraindonesia.com/member/masuk?src=https://ladaraindonesia.com/=<?php echo current_url(); ?>"><span class="menu-icon glyphicon glyphicon-user"></span> Masuk/Daftar</a>
-	          </li>
-	        <?php } ?>
-	      </ul>-->
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<div class="dropdown" style="top:5px;">
+					 <div id="loading-ct" class="loading-ct">  Halo!  Siapa? <span class="glyphicon glyphicon-user" aria-hidden="true" style="padding:15px;"></span></div>
+						<div class="dropdown-content" align="center" style="right:50px;">
+							<a href="#">Saldo</a>
+							<a href="<?php echo base_url('register') ?>">Register</a>
+						</div>
+					</div>
+				</ul>
+			</div>
+		</div>
 	</nav>

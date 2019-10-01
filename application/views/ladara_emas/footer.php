@@ -194,6 +194,40 @@ var lz_data = {overwrite:false,textlink:true};
 
 <script>
 
+$('#password').blur(function(){
+            var password=$(this).val();
+            var len=password.length;
+            if (len>0 && len<8) {
+                $(this).parent().find('.text-warning').text("");
+                $(this).parent().find('.text-warning').text("password minimal 8 karakter");
+                return apply_feedback_error(this);
+            } else {
+                if(len>35) {
+                    $(this).parent().find('.text-warning').text("");
+                    $(this).parent().find('.text-warning').text("password maximal 35 karakter");
+                    return apply_feedback_error(this);
+                }
+            }
+        });
+        //mengecek konfirmasi password
+        $('#conf_password').blur(function(){
+            var pass = $("#password").val();
+            var conf=$(this).val();
+            var len=conf.length;
+            if (len>0 && pass!==conf) {
+                $(this).parent().find('.text-warning').text("");
+                $(this).parent().find('.text-warning').text("Konfirmasi Password belum sama dengan password");
+                return apply_feedback_error(this);
+            } else {
+							if(len>0 && pass===conf) {
+								$(this).parent().find('.text-warning').text("Konfirmasi Password sudah sama dengan password");
+								return apply_feedback_error(this);
+							}
+						}
+        });
+
+        //mengecek nomer h
+
 // Show the first tab by default
 $('.tabs-stage div').hide();
 $('.tabs-stage div:first').show();
@@ -208,6 +242,93 @@ $('.tabs-stage div').hide();
 $($(this).attr('href')).show();
 });
 
+</script>
+
+<script>
+
+
+</script>
+
+<script>
+function readURL(input) {
+					 if (input.files && input.files[0]) {
+							 var reader = new FileReader();
+
+							 reader.onload = function (e) {
+									 $('#ktp')
+											 .attr('src', e.target.result);
+							 };
+
+							 reader.readAsDataURL(input.files[0]);
+					 }
+			 }
+
+</script>
+
+
+<script>
+  var input = document.querySelector('input[type=file]'); // see Example 4
+  input.onchange = function () {
+    var file = input.files[0];
+    //upload(file);
+    drawOnCanvas(file);   // see Example 6
+    //displayAsImage(file); // see Example 7
+  };
+
+  function upload(file) {
+    var form = new FormData(),
+        xhr = new XMLHttpRequest();
+
+    form.append('image', file);
+    xhr.open('post', 'server.php', true);
+    xhr.send(form);
+  }
+
+  function drawOnCanvas(file) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      var dataURL = e.target.result,
+          c = document.querySelector('canvas'), // see Example 4
+          ctx = c.getContext('2d'),
+          img = new Image();
+
+      img.onload = function() {
+        c.width = img.width;
+        c.height = img.height;
+        ctx.drawImage(img, 0, 0);
+      };
+
+      img.src = dataURL;
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+  function displayAsImage(file) {
+    var imgURL = URL.createObjectURL(file),
+        img = document.createElement('img');
+
+    img.onload = function() {
+      URL.revokeObjectURL(imgURL);
+    };
+
+    img.src = imgURL;
+    document.body.appendChild(img);
+  }
+  </script>
+
+<script>
+var myInput = document.getElementById('myFileInput');
+
+function sendPic() {
+    var file = myInput.files[0];
+
+    // Send file here either by adding it to a `FormData` object
+    // and sending that via XHR, or by simply passing the file into
+    // the `send` method of an XHR instance.
+}
+
+myInput.addEventListener('change', sendPic, false);
 </script>
 
 <script>
@@ -359,6 +480,12 @@ $(function () {
 					}]
 			});
 	});
+
+</script>
+
+<script>
+
+
 
 </script>
 
