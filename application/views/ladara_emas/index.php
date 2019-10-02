@@ -17,7 +17,7 @@
 	<div class="container" style="margin-top:70px">
 			<div class="row row-offcanvas row-offcanvas-left">
 
-				<div class="col-xs-4 col-sm-3 sidebar-offcanvas" id="sidebar">
+				<div class="col-xs-4 col-sm-3 sidebar-offcanvas sidebar" id="">
 						<p class="pull-left visible-xs">
 							<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Sidebar</button>
 						</p>

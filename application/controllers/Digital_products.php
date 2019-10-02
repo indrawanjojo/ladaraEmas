@@ -18,7 +18,13 @@ class Digital_products extends CI_Controller
 
 	public function index()
     {
-       $this->load->view('ladara_emas/index');
+      if ($this->agent->is_mobile()) {
+			$this->load->view('ladara_emas_mobile/index', $data);
+	    }
+	    elseif ($this->agent->is_mobile('ipad')) {
+			$this->load->view('ladara_emas_mobile/index', $data);
+    }
+     else $this->load->view('ladara_emas/index');
 	}
 
   public function profil_register(){

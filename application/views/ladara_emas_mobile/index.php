@@ -1,6 +1,5 @@
 <?php include "header.php"; ?>
 
-<?php include "menu.php"; ?>
 
 <!-- <div class="section-home-slide" style=""> -->
 	<!-- <div class="container" style=" background-image: url(<?php echo base_url('assets/images/emas/Banner.png') ?>);width: auto;height: 345px;background-size: cover;"> -->
@@ -8,7 +7,7 @@
 		<!-- <div class="row"> -->
 			<!-- <div class=""> -->
 				<!-- <div class="kt_home_slide slide-home5 nav-center" data-nav="true"  data-autoplay="true" data-loop="true" data-responsive='{"0":{"items":"1"},"768":{"items":"1","nav":false},"992":{"items":"1"}}'> -->
-					<img src="<?php echo base_url('assets') ?>/images/emas/Banner.jpg" style="margin-top:-20px;" />
+					<!-- <img src="<?php echo base_url('assets') ?>/images/emas/Banner.jpg" style="margin-top:-20px;" /> -->
 					<!-- </div> -->
 				<!-- </div> -->
 			<!-- </div> -->
@@ -25,13 +24,13 @@
 										<div class="panel-heading single-project-nav">
 											 <ul class="nav nav-tabs">
 														<li class="active">
-															 <a href="#user-profile-info" data-toggle="tab">Harga Jual/Beli</a>
+															 <a href="#user-profile-info" data-toggle="tab" style="padding:5px;">Harga Jual/Beli</a>
 														</li>
 														<li>
-															 <a href="#user-profile-payments" data-toggle="tab">Grafik Jual</a>
+															 <a href="#user-profile-payments" data-toggle="tab" style="padding:5px;">Grafik Jual</a>
 														</li>
 														<li>
-															 <a href="#user-profile-examples" data-toggle="tab">Grafik Beli</a>
+															 <a href="#user-profile-examples" data-toggle="tab" style="padding:5px;">Grafik Beli</a>
 														</li>
 												</ul>
 										 </div>

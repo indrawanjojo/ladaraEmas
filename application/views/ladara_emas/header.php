@@ -602,24 +602,9 @@ background-color: #337ab766;
 border-radius: 10px;
 }
 
-				@media (min-width: 768px) {
-				    .main {
-							left:70px;
-				    }
-				}
 
-				.sidebar {
-				    position: fixed;
-				    top: 71px;
-				    bottom: 0;
-				    left: 70px;
-				    display: block;
-				    padding: 20px;
-				    /* overflow-x: hidden;
-				    overflow-y: auto;  */
-				    /* background-color: #f5f5f5; */
-				    border-right: 1px solid #eee;
-				}
+
+
 
 				.dropbtn {
   color: #337ab7;
@@ -663,7 +648,31 @@ input[type=file]{
 padding:10px;
 }
 
+.sidebar{
+	display: inherit;
+}
 
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display:  none;
+  }
+	.menutop{
+		display: inherit;
+		padding-left: 10px;
+	}
+	.menudropdown{
+		position: initial;
+	}
+
+}
+@media screen and (min-width: 600px) {
+  .menutop {
+    display:  none;
+  }
+	.navmenuku{
+		height: 7%;
+	}
+}
 
 				</style>
 				<script src="https://unpkg.com/js-offcanvas@1.2.8/dist/_js/js-offcanvas.pkgd.min.js"></script>
@@ -671,7 +680,7 @@ padding:10px;
 </head>
 <body class="">
 
-	<nav class="navbar navbar-fixed-top navbar-inverse" style="background-color:#eee;border-color:#eee;">
+	<nav class="navbar navbar-fixed-top navbar-inverse navmenuku" style="background-color:#eee;border-color:#eee;">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -696,10 +705,15 @@ padding:10px;
 				<ul class="nav navbar-nav navbar-right">
 					<div class="dropdown" style="top:5px;">
 					 <div id="loading-ct" class="loading-ct">  Halo!  Siapa? <span class="glyphicon glyphicon-user" aria-hidden="true" style="padding:15px;"></span></div>
-						<div class="dropdown-content" align="center" style="right:50px;">
+						<div class="dropdown-content menudropdown" align="center" style="right:50px;">
 							<a href="#">Saldo</a>
 							<a href="<?php echo base_url('register') ?>">Register</a>
 						</div>
+						<a class="menutop" href="https://ladaraindonesia.com"> LadaraIndonesia.com</a><br>
+						<a class="menutop" href="#">Profil</a><br>
+						<a class="menutop" href="#"> Investasi Lainnya</a><br>
+						<a class="menutop" href="#">Transaksi Emas</a><br>
+						<a class="menutop" href="#">Riwayat Transaksi</a>
 					</div>
 				</ul>
 			</div>
